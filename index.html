@@ -1,61 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Terraria — Enciclopédia PT-BR</title>
-<meta name="description" content="Enciclopédia em português sobre Terraria: chefes, itens, biomas, NPCs e guias completos.">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<style>
-/* Estilo home inspirado em Terraria (céu + grama + blocos) */
-:root{
---sky-top:#77c7ff;
---sky-bottom:#6ab0ff;
---dusk:#3b8bd6;
---grass:#2fa04a;
---dirt:#6b4f2b;
---panel: rgba(255,255,255,0.06);
---accent:#ffd166;
---maxw:1100px;
---pixel: 'Press Start 2P', monospace;
-}
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;color:#0b1a1a}
-body{
-background: linear-gradient(180deg,var(--sky-top) 0%, var(--sky-bottom) 70%, var(--dusk) 100%);
-background-attachment: fixed;
--webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:1rem}
-header.site-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
-.brand{display:flex;gap:.8rem;align-items:center}
-.brand h1{font-family:var(--pixel);font-size:1.05rem;margin:0;color:#fff;text-shadow:1px 1px 0 rgba(0,0,0,0.25)}
-nav.main-nav ul{list-style:none;display:flex;gap:.6rem;margin:0;padding:0}
-nav.main-nav a{display:inline-block;padding:.5rem .7rem;border-radius:8px;background:var(--panel);color:#fff;text-decoration:none;font-size:.7rem}
-nav.main-nav a:hover{transform:translateY(-2px)}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terraria — Enciclopédia PT-BR</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Terraria — Enciclopédia PT-BR</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="itens/armas.html">Armas</a>
+      <a href="chefes.html">Chefes</a>
+      <a href="biomas.html">Biomas</a>
+      <a href="npcs.html">NPCs</a>
+    </nav>
+  </header>
 
+  <main>
+    <section>
+      <h2>Bem-vindo ao site!</h2>
+      <p>Este site é uma enciclopédia completa sobre Terraria com informações de itens, chefes, NPCs e biomas.</p>
+      <p>Escolha uma categoria no menu para começar.</p>
+    </section>
+  </main>
 
-/* Hero */
-.hero{display:flex;align-items:center;gap:1.5rem;padding:2rem;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));box-shadow: 0 8px 20px rgba(0,0,0,0.12);}
-.hero .left{flex:1}
-.hero h2{font-family:var(--pixel);font-size:1.25rem;margin:0 0 .6rem;color:#fff}
-.hero p{margin:0 0 1rem;color:rgba(255,255,255,0.9);font-size:.95rem}
-.cta-row{display:flex;gap:.6rem}
-.btn{background:var(--accent);padding:.6rem .9rem;border-radius:10px;text-decoration:none;color:#09110f;font-weight:700}
-.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);color:#fff}
-
-
-/* Grid seções */
-.sections{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
-.card{background:rgba(255,255,255,0.03);padding:1rem;border-radius:10px;border:1px solid rgba(0,0,0,0.08)}
-.card h3{margin:0 0 .4rem;color:#fff;font-family:var(--pixel);font-size:.9rem}
-.card p{margin:0;color:rgba(255,255,255,0.9);font-size:.85rem}
-
-
-/* Footer grama */
-.grass-row{margin-top:2rem;position:relative}
-.grass{height:120px;background:linear-gradient(180deg,var(--grass) 0%, #2b8b3f 40%, var(--dirt) 100%);border-top-left-radius:30px;border-top-right-radius:30px;box-shadow:0 -6px 20px rgba(0,0,0,0.15)}
-.grass .tiles{display:flex;gap:4px;padding:18px}
-.tile{width:40px;height:40px;background:rgba(0,0,0,0.06);border:2px solid rgba(0,0,0,0.06);box-shadow:inset 0 -4px 0 rgba(0,0,0,0.06)}
-}
+  <script src="js/main.js"></script>
+</body>
+</html>
