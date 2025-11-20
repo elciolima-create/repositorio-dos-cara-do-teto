@@ -1,103 +1,95 @@
-/* IMPORTA UMA FONTE GAMER/PIXELADA */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* ================================
+   🌿 Terraria — Enciclopédia PT‑BR
+   Arquivo: style.css (global)
+   ================================ */
 
+/* Fonte pixel retrô (Press Start 2P opcional, carregue no HTML) */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #121212;
-    color: white;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(#77c7ff, #4fa0ff, #2f63c8);
+  color: #ffffff;
+  background-attachment: fixed;
 }
 
-/* ---------- HEADER COM IMAGEM DE DESTAQUE ---------- */
-
-.hero {
-    position: relative;
-    padding: 80px 20px;
-    text-align: center;
-    background: url('imagens/header.jpg') center/cover no-repeat;
-    color: #fff;
+header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.4);
 }
 
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
+h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 16px;
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
 }
 
-.hero h1 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 32px;
-    margin: 0;
-    position: relative;
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: #ffe38d;
+  text-decoration: none;
+  margin: 0 8px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: 'Press Start 2P', monospace;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
-.hero p {
-    position: relative;
-    margin-top: 10px;
-    font-size: 18px;
+/* Containers */
+main {
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
 }
 
-/* ---------- MENU ---------- */
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    margin-top: 25px;
-    list-style: none;
-    position: relative;
-}
-
-nav ul li a {
-    color: #00ffd5;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #fff;
-    text-shadow: 0 0 10px #00ffd5;
-}
-
-/* ---------- CARDS DAS SEÇÕES ---------- */
-
+/* Estilo dos cartões das seções */
 .card {
-    background: #1e1e1e;
-    margin: 30px auto;
-    max-width: 900px;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #000;
-    animation: aparecer 0.6s ease forwards;
+  background: rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-@keyframes aparecer {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
+.card h2, .card h3 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  text-shadow: 2px 2px 0 #000;
 }
 
-.card h2 {
-    font-size: 28px;
-    color: #00ffd5;
+/* Área de imagem substituível */
+.placeholder {
+  width: 100%;
+  height: 150px;
+  border: 3px dashed rgba(255,255,255,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: rgba(255,255,255,0.9);
+  margin-top: 20px;
 }
 
-.section-img {
-    width: 100%;
-    margin: 15px 0;
-    border-radius: 10px;
-}
-
-/* ---------- FOOTER ---------- */
-
+/* Rodapé estilo grama */
 footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    background: #0d0d0d;
-    color: #aaa;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  background: #2fa04a;
+  border-top: 6px solid #6b4f2b;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
 }
