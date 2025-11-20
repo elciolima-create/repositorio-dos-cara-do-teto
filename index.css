@@ -1,72 +1,207 @@
-/* ================================
-   🌳 Terraria — Enciclopédia PT‑BR
-   Arquivo: index.css (estilo da página inicial)
-================================ */
+/* ==============================
+   Terraria Theme Melhorado
+============================== */
+
+:root {
+  --accent: #79e7ff;
+  --dark-panel: rgba(0, 0, 0, 0.6);
+  --light-panel: rgba(255, 255, 255, 0.08);
+  --border-color: #4ac0ff;
+  --font-pixel: 'Pixel', sans-serif;
+}
 
 /* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: var(--font-pixel);
 }
 
-body {
-  background: linear-gradient(#6fc3ff, #3a80d7);
-  background-attachment: fixed;
-  color: #fff;
+html, body {
+  height: 100%;
+  background: url("/mnt/data/55395f70-509a-4d8d-86ef-c03b5a140d32.jpeg") center / cover no-repeat fixed;
+  color: #ffffff;
   text-align: center;
-  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-header {
-  background: rgba(0, 0, 0, 0.4);
+/* Forçar aparência “pixelada” nas imagens */
+img {
+  image-rendering: pixelated; /* deixa imagens pixel art mais nítidas */  
+}
+
+/* Cabeçalho */
+header.site-header {
+  background: var(--dark-panel);
   padding: 20px;
-  backdrop-filter: blur(3px);
-  border-bottom: 3px solid #2b5fa7;
+  border-bottom: 3px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(4px);
 }
 
-h1 {
-  font-size: 2.5rem;
+header .brand h1 {
+  font-size: 2rem;
+  color: #fff;
   text-shadow: 2px 2px 4px #000;
 }
 
-nav {
-  margin-top: 15px;
+/* Navegação */
+nav.main-nav {
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  gap: 15px;
 }
 
-nav a {
-  color: #ffe28a;
+nav.main-nav a {
+  padding: 10px 16px;
+  background: var(--light-panel);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  background: rgba(0,0,0,0.3);
-  padding: 8px 15px;
+  transition: transform 0.15s, background 0.15s;
+}
+
+nav.main-nav a:hover {
+  transform: scale(1.05);
+  background: var(--dark-panel);
+  border-color: var(--accent);
+}
+
+/* Hero / Introdução */
+main .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  gap: 20px;
+  backdrop-filter: blur(2px);
+  background: var(--dark-panel);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.hero-left h2 {
+  font-size: 2.4rem;
+  text-shadow: 3px 3px 6px #000;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Botões principais */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--accent);
+  color: #000;
   border-radius: 8px;
-  transition: 0.2s;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
 }
 
-nav a:hover {
-  background: rgba(0,0,0,0.6);
-  transform: scale(1.1);
+.btn:hover {
+  transform: scale(1.05);
+  background: #9aedff;
 }
 
-main {
-  padding: 40px;
+.btn.ghost {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: #fff;
 }
 
-main h2 {
-  font-size: 2rem;
-  text-shadow: 2px 2px 5px #000;
-  margin-bottom: 10px;
+/* Cards das seções */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin: 40px 20px;
 }
 
-main p {
+.card {
+  background: var(--dark-panel);
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid var(--border-color);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+}
+
+.card h3 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Exemplo de item / ficha */
+.example-item {
+  margin: 60px 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.item-sample {
+  display: flex;
+  align-items: start;
+  background: var(--dark-panel);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px dashed var(--border-color);
+  image-rendering: pixelated;
+}
+
+.item-sample img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  object-fit: contain;
+  border: 2px solid var(--border-color);
+  background: var(--light-panel);
+}
+
+.item-meta h4 {
+  margin-bottom: 8px;
   font-size: 1.2rem;
-  margin: 10px 0;
-  text-shadow: 1px 1px 3px #000;
 }
 
-/* Rodapé futuramente */
+.item-meta p {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Rodapé */
+footer.site-footer {
+  padding: 20px;
+  background: var(--dark-panel);
+  border-top: 3px solid var(--border-color);
+  text-align: center;
+}
+
+footer small {
+  font-size: 0.9rem;
+  color: #ccc;
+}
