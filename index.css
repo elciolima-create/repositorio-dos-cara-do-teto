@@ -1,95 +1,72 @@
 /* ================================
-   🌿 Terraria — Enciclopédia PT‑BR
-   Arquivo: style.css (global)
-   ================================ */
+   🌳 Terraria — Enciclopédia PT‑BR
+   Arquivo: index.css (estilo da página inicial)
+================================ */
 
-/* Fonte pixel retrô (Press Start 2P opcional, carregue no HTML) */
-body {
+/* Reset básico */
+* {
   margin: 0;
-  font-family: 'Inter', Arial, sans-serif;
-  background: linear-gradient(#77c7ff, #4fa0ff, #2f63c8);
-  color: #ffffff;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+  background: linear-gradient(#6fc3ff, #3a80d7);
   background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
 }
 
 header {
-  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
   padding: 20px;
-  background: rgba(0, 0, 0, 0.3);
-  border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  border-bottom: 3px solid #2b5fa7;
 }
 
 h1 {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 16px;
-  margin: 0;
-  color: #fff;
-  text-shadow: 2px 2px 0 #000;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px #000;
 }
 
 nav {
-  margin-top: 10px;
-}
-nav a {
-  color: #ffe38d;
-  text-decoration: none;
-  margin: 0 8px;
-  padding: 6px 10px;
-  background: rgba(0, 0, 0, 0.4);
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  border-radius: 6px;
-  font-size: 12px;
-  font-family: 'Press Start 2P', monospace;
-}
-nav a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-}
-
-/* Containers */
-main {
-  width: 90%;
-  max-width: 960px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* Estilo dos cartões das seções */
-.card {
-  background: rgba(0, 0, 0, 0.3);
-  border: 3px solid rgba(0, 0, 0, 0.5);
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.card h2, .card h3 {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 14px;
-  text-shadow: 2px 2px 0 #000;
-}
-
-/* Área de imagem substituível */
-.placeholder {
-  width: 100%;
-  height: 150px;
-  border: 3px dashed rgba(255,255,255,0.6);
+  margin-top: 15px;
   display: flex;
+  gap: 20px;
   justify-content: center;
-  align-items: center;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 12px;
-  color: rgba(255,255,255,0.9);
-  margin-top: 20px;
 }
 
-/* Rodapé estilo grama */
-footer {
-  margin-top: 50px;
-  padding: 20px;
-  text-align: center;
-  background: #2fa04a;
-  border-top: 6px solid #6b4f2b;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 10px;
+nav a {
+  color: #ffe28a;
+  text-decoration: none;
+  font-weight: bold;
+  background: rgba(0,0,0,0.3);
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: 0.2s;
 }
+
+nav a:hover {
+  background: rgba(0,0,0,0.6);
+  transform: scale(1.1);
+}
+
+main {
+  padding: 40px;
+}
+
+main h2 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px #000;
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Rodapé futuramente */
