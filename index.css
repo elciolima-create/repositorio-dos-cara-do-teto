@@ -22,7 +22,7 @@ body {
   text-align: center;
 }
 
-/* 🔹 Cabeçalho */
+/*  Cabeçalho */
 header {
   background: rgba(0, 0, 0, 0.55);
   padding: 25px;
@@ -35,7 +35,7 @@ h1 {
   text-shadow: 3px 3px 6px black;
 }
 
-/* 🔹 Menu estilo Terraria */
+/*  Menu estilo Terraria */
 nav {
   margin-top: 20px;
   display: flex;
@@ -60,7 +60,7 @@ nav a:hover {
   transform: scale(1.12);
 }
 
-/* 🔹 Seção de apresentação */
+/* Seção de apresentação */
 .intro {
   margin-top: 40px;
   background: rgba(0,0,0,0.45);
@@ -73,7 +73,6 @@ nav a:hover {
   box-shadow: 0 0 12px black;
 }
 
-/* 🔹 Cards */
 .cards-container {
   margin-top: 50px;
   display: flex;
@@ -99,7 +98,6 @@ nav a:hover {
   background: rgba(0, 0, 0, 0.75);
 }
 
-/* 🔹 Rodapé */
 footer {
   margin-top: 40px;
   padding: 15px;
