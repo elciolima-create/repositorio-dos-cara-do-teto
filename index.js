@@ -1,13 +1,12 @@
-console.log("Terraria Enciclopédia carregada!");
+// Menu Mobile
+document.addEventListener("DOMContentLoaded", () => {
 
+  const menuBtn = document.querySelector("#menu-btn");
+  const nav = document.querySelector("#menu");
 
-// MENU MOBILE
-const menuBtn = document.querySelector("#menu-btn");
-const nav = document.querySelector("nav");
+  menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("aberto");
+  });
 
-
-if (menuBtn) {
-menuBtn.addEventListener("click", () => {
-nav.classList.toggle("aberto");
+  console.log("Site Terraria RPG carregado — JS ativo");
 });
-}
