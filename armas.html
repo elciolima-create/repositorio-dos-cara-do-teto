@@ -1,20 +1,138 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="../index.css">
-<title>Armas — Terraria</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Armas — Terraria RPG</title>
+  <link rel="stylesheet" href="../index.css" />
 </head>
 <body>
-<h1>Armas</h1>
-<p>Lista simples de armas do Terraria.</p>
 
+<header class="header">
+  <div class="logo">🌿 Terraria RPG</div>
+  <button id="menu-btn" class="menu-btn">☰</button>
 
-<ul class="lista">
-<li>Espada de Cobre</li>
-<li>Arco de Madeira</li>
-<li>Espada de Ferro</li>
-<li>Arco de Ouro</li>
-</ul>
+  <nav id="menu" class="nav">
+    <a href="../index.html">Início</a>
+    <a href="armas.html">Armas</a>
+    <a href="chefes.html">Chefes</a>
+    <a href="biomas.html">Biomas</a>
+    <a href="npcs.html">NPCs</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="padding:30px 20px;">
+    <h1>⚔️ Armas — Guia Completo</h1>
+    <p>Resumo prático sobre classes de armas, tiers, estatísticas e como consegui-las.</p>
+  </section>
+
+  <!-- Overview -->
+  <section class="grid-categorias" style="padding:20px; gap:18px;">
+    <article class="card">
+      <h2>Melee (Corpo a Corpo)</h2>
+      <p>Espadas, lanças, martelos e armas de golpe — alta consistência de dano.</p>
+      <ul style="text-align:left;margin-top:10px;">
+        <li><strong>Exemplo inicial:</strong> Espada de Cobre — craft com barras de cobre.</li>
+        <li><strong>Bom para:</strong> jogadores que gostam de ficar perto do inimigo.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Ranged (À distância)</h2>
+      <p>Arcos, bestas, armas de fogo e armas que usam munição.</p>
+      <ul style="text-align:left;margin-top:10px;">
+        <li><strong>Exemplo inicial:</strong> Arco de Madeira + flechas.</li>
+        <li><strong>Bom para:</strong> explorar e evitar dano corpo a corpo.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Mage (Mágica)</h2>
+      <p>Runas, varinhas e bastões que consomem mana — alto dano mágico.</p>
+      <ul style="text-align:left;margin-top:10px;">
+        <li><strong>Exemplo inicial:</strong> Wand / Wooden Staff (varia por versão).</li>
+        <li><strong>Dica:</strong> combine com acessórios que aumentem mana e redução de consumo.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Summoner (Invocação)</h2>
+      <p>Summons invocam minions que atacam por você. Boa para multitarefa.</p>
+    </article>
+  </section>
+
+  <!-- Tabela resumida de progressão -->
+  <section class="card" style="max-width:1100px;margin:22px auto;">
+    <h2>Progressão rápida (exemplo simplificado)</h2>
+    <table style="width:100%;border-collapse:collapse;text-align:left">
+      <thead>
+        <tr>
+          <th style="padding:8px;border-bottom:2px solid rgba(255,255,255,0.06)">Fase</th>
+          <th style="padding:8px;border-bottom:2px solid rgba(255,255,255,0.06)">Arma típica</th>
+          <th style="padding:8px;border-bottom:2px solid rgba(255,255,255,0.06)">Como obter</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:8px">Início</td>
+          <td style="padding:8px">Espada de Cobre / Arco de Madeira</td>
+          <td style="padding:8px">Craft com barras de cobre / madeira</td>
+        </tr>
+        <tr>
+          <td style="padding:8px">Pré-Chefes</td>
+          <td style="padding:8px">Espada de Ferro / Arco de Ferro</td>
+          <td style="padding:8px">Minério do subsolo / forja</td>
+        </tr>
+        <tr>
+          <td style="padding:8px">Hardmode (após Wall of Flesh)</td>
+          <td style="padding:8px">Armas de minério avançado / armas de chefe</td>
+          <td style="padding:8px">Minérios de Hardmode / drops de chefes</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Exemplos detalhados -->
+  <section class="card" style="max-width:1100px;margin:22px auto;">
+    <h2>Exemplos detalhados</h2>
+
+    <article style="margin:12px 0;">
+      <h3>Espada de Cobre</h3>
+      <p><strong>Dano:</strong> 5 — <strong>Tipo:</strong> Melee — <strong>Uso:</strong> early game</p>
+      <p><strong>Como fazer:</strong> 8 barras de cobre + bancada de trabalho.</p>
+      <p><strong>Dica:</strong> atualize para lâminas com maior velocidade/knockback assim que possível.</p>
+    </article>
+
+    <article style="margin:12px 0;">
+      <h3>Arco de Madeira</h3>
+      <p><strong>Dano:</strong> 7 — <strong>Tipo:</strong> Ranged — <strong>Uso:</strong> early game</p>
+      <p><strong>Como fazer:</strong> 10 madeira + bancada.</p>
+      <p><strong>Dica:</strong> sempre carregue flechas variadas (normal, flaming, etc.).</p>
+    </article>
+
+    <article style="margin:12px 0;">
+      <h3>Varinha básica</h3>
+      <p><strong>Dano:</strong> varia — <strong>Tipo:</strong> Mage — <strong>Uso:</strong> controle de mobs</p>
+      <p><strong>Dica:</strong> invista em mana e mana potions para uso prolongado.</p>
+    </article>
+  </section>
+
+  <!-- Build/Load selo -->
+  <section class="card" style="max-width:1100px;margin:22px auto;">
+    <h2>Recomendações de build por estilo</h2>
+    <ul style="text-align:left;">
+      <li><strong>Melee:</strong> Priorize armadura com defesa alta, acessórios de velocidade e +dano corpo a corpo.</li>
+      <li><strong>Ranged:</strong> Use boa munição, armadura com aumento de velocidade de tiro e crítico.</li>
+      <li><strong>Mage:</strong> Maximize mana, use acessórios de redução de consumo e alta regeneração.</li>
+      <li><strong>Summoner:</strong> Tenha minions suficientes e acessórios que aumentem número/potência.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">Terraria RPG — PT-BR</footer>
+
+<script src="../main.js"></script>
 </body>
 </html>
