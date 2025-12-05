@@ -1,19 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="../index.css">
-<title>NPCs — Terraria</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NPCs — Terraria RPG</title>
+  <link rel="stylesheet" href="../index.css" />
 </head>
 <body>
-<h1>NPCs</h1>
 
+<header class="header">
+  <div class="logo">🌿 Terraria RPG</div>
+  <button id="menu-btn" class="menu-btn">☰</button>
 
-<ul class="lista">
-<li>Guide</li>
-<li>Merchant</li>
-<li>Demolitionist</li>
-<li>Nurse</li>
-</ul>
+  <nav id="menu" class="nav">
+    <a href="../index.html">Início</a>
+    <a href="armas.html">Armas</a>
+    <a href="chefes.html">Chefes</a>
+    <a href="biomas.html">Biomas</a>
+    <a href="npcs.html">NPCs</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="padding:28px 20px;">
+    <h1>🧙 NPCs — Quem é quem</h1>
+    <p>Guia dos NPCs mais importantes, requisitos para spawn e itens vendidos.</p>
+  </section>
+
+  <section class="card" style="max-width:1100px;margin:20px auto;">
+    <h2>Guide (Guia)</h2>
+    <p><strong>Função:</strong> dá dicas, receitas e é o primeiro NPC.</p>
+    <p><strong>Requisitos:</strong> nasce automaticamente no início do jogo.</p>
+    <p><strong>Itens:</strong> vendas básicas e dicas de crafting.</p>
+  </section>
+
+  <section class="card" style="max-width:1100px;margin:20px auto;">
+    <h2>Merchant (Mercador)</h2>
+    <p><strong>Função:</strong> vende itens úteis de sobrevivência.</p>
+    <p><strong>Requisito:</strong> jogador deve ter >= 50 moedas de prata (ou equivalente).</p>
+    <p><strong>Itens típicos:</strong> poções básicas, corda, picareta inicial.</p>
+  </section>
+
+  <section class="card" style="max-width:1100px;margin:20px auto;">
+    <h2>Nurse (Enfermeira)</h2>
+    <p><strong>Função:</strong> cura o jogador por dinheiro.</p>
+    <p><strong>Requisito:</strong> jogador deve ter perdido vida em batalha / progredido.</p>
+    <p><strong>Dica:</strong> ótima para recuperar entre lutas com chefes.</p>
+  </section>
+
+  <section class="card" style="max-width:1100px;margin:20px auto;">
+    <h2>Outros NPCs importantes</h2>
+    <ul style="text-align:left;">
+      <li><strong>Demolitionist:</strong> vende explosivos — aparece quando player tem explosivos no inventário.</li>
+      <li><strong>Dryad:</strong> vende itens relacionados ao bioma e fornece informações sobre o estado do mundo.</li>
+      <li><strong>Arms Dealer:</strong> vende armas de fogo — aparece com munição/arma no inventário do jogador.</li>
+    </ul>
+  </section>
+
+  <section class="card" style="max-width:1100px;margin:20px auto;">
+    <h2>Dicas práticas sobre NPCs</h2>
+    <ul style="text-align:left;">
+      <li>Construa casas com iluminação, cadeiras e mesas para que NPCs apareçam.</li>
+      <li>Mude a posição/bioma das casas se quiser NPCs específicos.</li>
+      <li>Alguns NPCs exigem condições (boss derrotado, moeda no inventário, etc.).</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">Terraria RPG — PT-BR</footer>
+
+<script src="../main.js"></script>
 </body>
 </html>
