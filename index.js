@@ -1,12 +1,18 @@
-// Menu Mobile
-document.addEventListener("DOMContentLoaded", () => {
+console.log("Terraria RPG iniciado!");
 
-  const menuBtn = document.querySelector("#menu-btn");
-  const nav = document.querySelector("#menu");
+// MENU MOBILE
+const btn = document.querySelector("#menu-btn");
+const menu = document.querySelector("#menu");
 
-  menuBtn.addEventListener("click", () => {
-    nav.classList.toggle("aberto");
-  });
+btn.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
 
-  console.log("Site Terraria RPG carregado — JS ativo");
+// THEME SWITCH
+const themeBtn = document.querySelector("#theme-btn");
+
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+  themeBtn.textContent =
+    document.body.classList.contains("light") ? "🌙 Tema Escuro" : "☀️ Tema Claro";
 });
