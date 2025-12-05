@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terraria — Enciclopédia PT-BR</title>
-  <!-- Caminho CSS corrigido para GitHub Pages -->
-  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terraria RPG — Enciclopédia PT-BR</title>
+
+  <!-- CSS PRINCIPAL -->
+  <link rel="stylesheet" href="index.css" />
 </head>
+
 <body>
-  <header>
-    <h1>Terraria — Enciclopédia PT-BR</h1>
-    <nav>
+
+  <!-- MENU SUPERIOR -->
+  <header class="header">
+    <div class="logo">Terraria RPG</div>
+
+    <button id="menu-btn" class="menu-btn">☰</button>
+
+    <nav id="menu" class="nav">
+      <a href="index.html">Início</a>
       <a href="paginas/armas.html">Armas</a>
       <a href="paginas/chefes.html">Chefes</a>
       <a href="paginas/biomas.html">Biomas</a>
@@ -18,38 +26,48 @@
     </nav>
   </header>
 
-  <main>
-    <section class="intro">
-      <h2>Bem-vindo!</h2>
-      <p>Este site é uma enciclopédia completa sobre Terraria com guias, itens, chefes, NPCs e muito mais.</p>
-      <p>Escolha uma categoria no menu acima!</p>
-    </section>
+  <!-- HERO PRINCIPAL -->
+  <section class="hero">
+    <h1>Mundo de Terraria</h1>
+    <p>Explore armas, chefes, biomas e NPCs — tudo no estilo RPG Fantasy.</p>
+  </section>
 
-    <section class="cards-container">
-      <div class="card">
-        <h3>Armas</h3>
-        <p>Lista completa com imagens e modo de obtenção.</p>
-      </div>
+  <!-- CARDS -->
+  <section class="cards">
+    
+    <div class="card">
+      <h2>⚔️ Armas</h2>
+      <p>Listas completas, atributos e maneiras de obter cada uma.</p>
+      <a href="paginas/armas.html" class="btn">Ver Armas</a>
+    </div>
 
-      <div class="card">
-        <h3>Chefes</h3>
-        <p>Como invocar, estratégias e drops.</p>
-      </div>
+    <div class="card">
+      <h2>🐉 Chefes</h2>
+      <p>Invocação, estratégias e recompensas de cada chefe.</p>
+      <a href="paginas/chefes.html" class="btn">Ver Chefes</a>
+    </div>
 
-      <div class="card">
-        <h3>Biomas</h3>
-        <p>Informações sobre cada área e seus recursos.</p>
-      </div>
+    <div class="card">
+      <h2>🌍 Biomas</h2>
+      <p>Ambientes, criaturas, recursos e mistérios de cada bioma.</p>
+      <a href="paginas/biomas.html" class="btn">Ver Biomas</a>
+    </div>
 
-      <div class="card">
-        <h3>NPCs</h3>
-        <p>Pré-requisitos, spawn e itens vendidos.</p>
-      </div>
-    </section>
-  </main>
+    <div class="card">
+      <h2>🧙 NPCs</h2>
+      <p>Funções, requisitos e itens vendidos por todos os NPCs.</p>
+      <a href="paginas/npcs.html" class="btn">Ver NPCs</a>
+    </div>
 
-  <footer>
-    <p>Site feito por Elcio — Fã de Terraria</p>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    Terraria RPG — Criado para fãs | PT-BR
   </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="main.js"></script>
+
 </body>
 </html>
