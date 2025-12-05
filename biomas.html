@@ -1,19 +1,255 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="../index.css">
-<title>Biomas — Terraria</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biomas — Enciclopédia Terraria RPG</title>
+
+  <link rel="stylesheet" href="../index.css">
+  <script defer src="../main.js"></script>
 </head>
-<body>
-<h1>Biomas</h1>
 
+<body class="page-interna">
 
-<ul class="lista">
-<li>Floresta</li>
-<li>Deserto</li>
-<li>Neve</li>
-<li>Corruption</li>
-</ul>
+<header>
+  <h1>🌍 Biomas — Terraria Enciclopédia RPG</h1>
+  <nav>
+    <a href="../index.html">Início</a>
+    <a href="armas.html">Armas</a>
+    <a href="chefes.html">Chefes</a>
+    <a href="biomas.html" class="active">Biomas</a>
+    <a href="npcs.html">NPCs</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <h2>🌿 Guia Completo de Biomas</h2>
+    <p>Terraria possui uma grande variedade de biomas, cada um com inimigos, itens, blocos e recursos únicos.  
+    Aqui você encontra um resumo completo de cada área e suas características mais importantes.</p>
+  </section>
+
+  <!-- MENU DE SEÇÕES -->
+  <div class="subnav">
+    <button data-target="superficie">Superfície</button>
+    <button data-target="floresta">Floresta</button>
+    <button data-target="deserto">Deserto</button>
+    <button data-target="neve">Neve</button>
+    <button data-target="crimson">Crimson</button>
+    <button data-target="corruption">Corruption</button>
+    <button data-target="jungle">Selva</button>
+    <button data-target="oceano">Oceano</button>
+    <button data-target="mushroom">Cogumelo</button>
+    <button data-target="underworld">Underworld</button>
+  </div>
+
+  <!-- SUPERFÍCIE -->
+  <section id="superficie" class="bioma-section">
+    <h2>🏞️ Superfície</h2>
+
+    <div class="card-grid">
+
+      <div class="card bioma">
+        <h3>Superfície Geral</h3>
+        <img src="../imgs/bioma_superficie.png" alt="Superfície">
+        <p>Área principal onde o jogo começa. Possui árvores, grama, pequenas cavernas e baús.</p>
+        <ul>
+          <li><b>Inimigos:</b> Slimes, Zumbis, Coelhos corrompidos</li>
+          <li><b>Recursos:</b> Madeira, ervas, minérios superficiais</li>
+          <li><b>Perigos:</b> Zumbis à noite</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FLORESTA -->
+  <section id="floresta" class="bioma-section">
+    <h2>🌲 Floresta</h2>
+
+    <div class="card-grid">
+
+      <div class="card bioma">
+        <h3>Floresta</h3>
+        <img src="../imgs/bioma_floresta.png" alt="Floresta">
+        <p>Bioma mais seguro, ideal para iniciar e construir sua base inicial.</p>
+        <ul>
+          <li><b>Inimigos:</b> Slimes coloridos</li>
+          <li><b>Recursos:</b> Árvores, erva-daybloom</li>
+          <li><b>Perigos:</b> Baixo</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DESERTO -->
+  <section id="deserto" class="bioma-section">
+    <h2>🏜️ Deserto</h2>
+
+    <div class="card-grid">
+
+      <div class="card bioma">
+        <h3>Deserto</h3>
+        <img src="../imgs/bioma_deserto.png" alt="Deserto">
+        <p>Bioma quente cheio de inimigos rápidos e tempestades de areia.</p>
+        <ul>
+          <li><b>Inimigos:</b> Antlions, Vultures</li>
+          <li><b>Recursos:</b> Cactus, fósseis</li>
+          <li><b>Perigos:</b> Tempestades aumentam o spawn</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEVE -->
+  <section id="neve" class="bioma-section">
+    <h2>❄️ Neve</h2>
+
+    <div class="card-grid">
+
+      <div class="card bioma">
+        <h3>Tundra Congelada</h3>
+        <img src="../imgs/bioma_neve.png" alt="Neve">
+        <p>Bioma gelado com inimigos mais perigosos e cavernas congeladas.</p>
+        <ul>
+          <li><b>Inimigos:</b> Ice Slime, Zombies de gelo</li>
+          <li><b>Recursos:</b> Minérios congelados, Ice Blocks</li>
+          <li><b>Perigos:</b> Cavernas profundas</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CRIMSON -->
+  <section id="crimson" class="bioma-section">
+    <h2>🩸 Crimson</h2>
+
+    <div class="card-grid">
+
+      <div class="card bioma">
+        <h3>Crimson</h3>
+        <img src="../imgs/bioma_crimson.png" alt="Crimson">
+        <p>Bioma carmesim infectado, perigoso e com inimigos muito agressivos.</p>
+        <ul>
+          <li><b>Inimigos:</b> Face Monster, Crimeras</li>
+          <li><b>Recursos:</b> Crimtane Ore</li>
+          <li><b>Perigos:</b> Velocidade dos inimigos</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CORRUPTION -->
+  <section id="corruption" class="bioma-section">
+    <h2>☠️ Corruption</h2>
+
+    <div class="card-grid">
+
+      <div class="card bioma">
+        <h3>Corruption</h3>
+        <img src="../imgs/bioma_corruption.png" alt="Corruption">
+        <p>Versão roxa do bioma maligno. Repleto de devourers e ebon monsters.</p>
+        <ul>
+          <li><b>Inimigos:</b> Eater of Souls</li>
+          <li><b>Recursos:</b> Demonite Ore</li>
+          <li><b>Perigos:</b> Voadores agressivos</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SELVA -->
+  <section id="jungle" class="bioma-section">
+    <h2>🌴 Selva</h2>
+
+    <div class="card-grid">
+
+      <div class="card bioma">
+        <h3>Selva</h3>
+        <img src="../imgs/bioma_selva.png" alt="Selva">
+        <p>Bioma muito perigoso no início do jogo, mas cheio de recursos valiosos.</p>
+        <ul>
+          <li><b>Inimigos:</b> Hornets, Man Eaters</li>
+          <li><b>Recursos:</b> Jungle Spores, Stingers</li>
+          <li><b>Perigos:</b> Alto</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OCEANO -->
+  <section id="oceano" class="bioma-section">
+    <h2>🌊 Oceano</h2>
+
+    <div class="card-grid">
+
+      <div class="card bioma">
+        <h3>Oceano</h3>
+        <img src="../imgs/bioma_oceano.png" alt="Oceano">
+        <p>Área nas bordas do mapa. Riscos por afogamento e tubarões.</p>
+        <ul>
+          <li><b>Inimigos:</b> Sharks</li>
+          <li><b>Recursos:</b> Water Chest, corais</li>
+          <li><b>Perigos:</b> Fôlego limitado</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COGUMELO -->
+  <section id="mushroom" class="bioma-section">
+    <h2>🍄 Cogumelo Brilhante</h2>
+
+    <div class="card-grid">
+
+      <div class="card bioma">
+        <h3>Bioma de Cogumelo</h3>
+        <img src="../imgs/bioma_cogumelo.png" alt="Mushroom">
+        <p>Área azul luminosa com música marcante.</p>
+        <ul>
+          <li><b>Inimigos:</b> Mushroom Zombies</li>
+          <li><b>Recursos:</b> Glowing Mushrooms</li>
+          <li><b>Perigos:</b> Moderado</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- UNDERWORLD -->
+  <section id="underworld" class="bioma-section">
+    <h2>🔥 Underworld</h2>
+
+    <div class="card-grid">
+
+      <div class="card bioma">
+        <h3>Inferno</h3>
+        <img src="../imgs/bioma_underworld.png" alt="Underworld">
+        <p>Bioma final pré-Hardmode, lar do Wall of Flesh.</p>
+        <ul>
+          <li><b>Inimigos:</b> Demons, Bone Serpents</li>
+          <li><b>Recursos:</b> Hellstone, Hellforge</li>
+          <li><b>Perigos:</b> Lava, demônios</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Terraria — Enciclopédia RPG • Desenvolvido por você</p>
+</footer>
+
 </body>
 </html>
