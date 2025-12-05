@@ -1,103 +1,66 @@
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Trebuchet MS", sans-serif;
-}
-
-/* 🌱 FUNDO ESTILO TERRAIA BLOCADO */
-body {
-  background-image: url("https://i.imgur.com/4AYgVyX.png");
-  background-size: 64px 64px; /* tamanho do bloco */
-  background-repeat: repeat;
-  background-color: #4dad49; /* cor base */
-  color: #fff;
-  min-height: 100vh;
-  text-align: center;
-}
-
-/*  Cabeçalho */
-header {
-  background: rgba(0, 0, 0, 0.55);
-  padding: 25px;
-  border-bottom: 4px solid #2b5fa7;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-h1 {
-  font-size: 3rem;
-  text-shadow: 3px 3px 6px black;
-}
-
-/*  Menu estilo Terraria */
 nav {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
+display: flex;
+gap: 20px;
 }
+
 
 nav a {
-  background: #3a7bd5;
-  padding: 10px 20px;
-  border: 3px solid #1d4d91;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #ffe28a;
-  text-shadow: 2px 2px 3px #000;
-  transition: 0.2s;
+background: #3a7bd5;
+padding: 10px 20px;
+border: 3px solid #1d4d91;
+border-radius: 8px;
+color: #ffe28a;
+text-decoration: none;
+transition: .2s;
 }
+nav a:hover { transform: scale(1.1); }
 
-nav a:hover {
-  background: #215da1;
-  transform: scale(1.12);
-}
 
-/* Seção de apresentação */
 .intro {
-  margin-top: 40px;
-  background: rgba(0,0,0,0.45);
-  padding: 25px;
-  border-radius: 10px;
-  border: 3px solid #245fa3;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 12px black;
+margin: 40px auto;
+background: rgba(0,0,0,0.5);
+padding: 25px;
+border-radius: 10px;
+width: 70%;
 }
+
 
 .cards-container {
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  padding-bottom: 60px;
+margin: 40px auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+padding-bottom: 80px;
 }
+
 
 .card {
-  background: rgba(0, 0, 0, 0.55);
-  border: 4px solid #2e5cad;
-  padding: 25px;
-  width: 260px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px #000;
-  transition: 0.3s;
-  text-shadow: 2px 2px 3px #000;
+background: rgba(0,0,0,0.6);
+padding: 20px;
+width: 240px;
+border: 3px solid #2e5cad;
+border-radius: 10px;
+display: block;
+text-decoration: none;
+color: white;
+transition: .3s;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  background: rgba(0, 0, 0, 0.75);
+
+.card img {
+width: 100px;
+margin-bottom: 10px;
 }
+
+
+.card:hover { transform: scale(1.07); }
+
 
 footer {
-  margin-top: 40px;
-  padding: 15px;
-  background: rgba(0,0,0,0.5);
-  border-top: 3px solid #1d4d91;
-  text-shadow: 2px 2px 4px #000;
+background: rgba(0,0,0,0.5);
+padding: 20px;
+border-top: 3px solid #1d4d91;
+margin-top: 40px;
 }
-
