@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terraria RPG — Enciclopédia PT-BR</title>
-  <link rel="stylesheet" href="index.css" />
-</head>
+    <meta charset="UTF-8">
+    <title>Terraria — Enciclopédia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="index.css">
+</head>
 <body>
 
-<header class="header">
-  <div class="logo">🌿 Terraria RPG</div>
-  <button id="menu-btn" class="menu-btn">☰</button>
+<!-- FUNDO TERRARIA -->
+<div class="background">
+    <div class="sky"></div>
+    <div class="clouds"></div>
+    <div class="mountains"></div>
+    <div class="trees"></div>
+    <div class="ground"></div>
+</div>
 
-  <nav id="menu" class="nav">
-    <a href="index.html">Início</a>
-    <a href="armas.html">Armas</a>
-    <a href="chefes.html">Chefes</a>
-    <a href="biomas.html">Biomas</a>
-    <a href="npcs.html">NPCs</a>
-  </nav>
+<header class="site-header">
+    <div class="container">
+        <div class="brand">
+            <img src="slime.png" alt="Logo" class="logo">
+            <span>Terraria Wiki</span>
+        </div>
+
+        <nav class="main-nav" id="menu">
+            <a href="index.html" class="active">Início</a>
+            <a href="armas.html">Armas</a>
+            <a href="chefes.html">Chefes</a>
+            <a href="biomas.html">Biomas</a>
+            <a href="npcs.html">NPCs</a>
+        </nav>
+
+        <button id="menu-btn">☰</button>
+    </div>
 </header>
 
 <section class="hero">
-  <h1>Terraria RPG — Enciclopédia Completa</h1>
-  <p>Guia definitivo com armas, chefes, biomas, NPCs e muito mais.</p>
-  <button class="btn-hero" id="theme-btn">🌙 Alternar Tema</button>
+    <h1>Explore o Mundo de Terraria</h1>
+    <p>Uma enciclopédia simples, bonita e fiel ao estilo do jogo.</p>
 </section>
 
-<section class="grid-categorias">
+<section class="cards">
+    <a class="card" href="armas.html">
+        <img src="sword.png" alt="">
+        <h3>Armas</h3>
+        <p>Espadas, arcos, magias e mais</p>
+    </a>
 
-  <a class="card" href="paginas/armas.html">
-    <h2>⚔️ Armas</h2>
-    <p>Guias de dano, raridade, progressão e obtenção.</p>
-  </a>
+    <a class="card" href="chefes.html">
+        <img src="boss.png" alt="">
+        <h3>Chefes</h3>
+        <p>Como invocar e derrotar</p>
+    </a>
 
-  <a class="card" href="paginas/chefes.html">
-    <h2>🐉 Chefes</h2>
-    <p>Invocações, estratégias e recompensas completas.</p>
-  </a>
+    <a class="card" href="biomas.html">
+        <img src="bioma.png" alt="">
+        <h3>Biomas</h3>
+        <p>Cada região do jogo</p>
+    </a>
 
-  <a class="card" href="paginas/biomas.html">
-    <h2>🌍 Biomas</h2>
-    <p>Encontros, recursos, perigos e mobs de cada região.</p>
-  </a>
-
-  <a class="card" href="paginas/npcs.html">
-    <h2>🧙 NPCs</h2>
-    <p>Funções, requisitos, diálogos e preferências.</p>
-  </a>
-
+    <a class="card" href="npcs.html">
+        <img src="npc.png" alt="">
+        <h3>NPCs</h3>
+        <p>Casas, itens e efeitos</p>
+    </a>
 </section>
 
-<footer class="footer">
-  Terraria RPG — PT-BR • Criado para GitHub Pages
+<footer class="site-footer">
+    <p>Projeto fã de Terraria — feito para aprendizado 🌱</p>
 </footer>
 
 <script src="index.js"></script>
-
 </body>
 </html>
-
