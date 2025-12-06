@@ -5,62 +5,71 @@
     <title>Terraria — Enciclopédia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS correto -->
-    <link rel="stylesheet" href="index.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
     <div class="container">
+
+        <!-- LOGO DO TERRARIA -->
         <div class="brand">
-            <span class="logo">🟢</span>
-            <span class="title">Terraria Wiki</span>
+            <img src="terraria-logo.png" alt="Terraria Logo" class="logo-img">
         </div>
 
+        <!-- MENU PRINCIPAL -->
         <nav class="main-nav">
-            <a href="index.html">Início</a>
+            <a href="index.html" class="active">Início</a>
             <a href="armas.html">Armas</a>
             <a href="chefes.html">Chefes</a>
             <a href="biomas.html">Biomas</a>
             <a href="npcs.html">NPCs</a>
         </nav>
+
     </div>
 </header>
 
 <main>
+
+    <!-- HERO -->
     <section class="hero">
         <h1>Explore o Mundo de Terraria</h1>
-        <p>Uma enciclopédia simples, bonita e fiel ao estilo do jogo.</p>
+        <p>
+            Uma enciclopédia simples, organizada e fiel ao estilo do jogo.
+        </p>
     </section>
 
+    <!-- CONTEÚDO -->
     <section class="cards">
-        <div class="card">
+
+        <a href="armas.html" class="card">
             <h3>Armas</h3>
-            <p>Espadas, arcos, magias e mais</p>
-        </div>
+            <p>Espadas, arcos, magias e armas raras.</p>
+        </a>
 
-        <div class="card">
+        <a href="chefes.html" class="card">
             <h3>Chefes</h3>
-            <p>Como invocar e derrotar</p>
-        </div>
+            <p>Como invocar, derrotar e recompensas.</p>
+        </a>
 
-        <div class="card">
+        <a href="biomas.html" class="card">
             <h3>Biomas</h3>
-            <p>Cada região do jogo</p>
-        </div>
+            <p>Cada região do mundo de Terraria.</p>
+        </a>
 
-        <div class="card">
+        <a href="npcs.html" class="card">
             <h3>NPCs</h3>
-            <p>Casas, itens e efeitos</p>
-        </div>
+            <p>Casas, itens vendidos e requisitos.</p>
+        </a>
+
     </section>
+
 </main>
 
 <footer class="site-footer">
-    <p>Projeto fã de Terraria — feito para aprendizado 🌱</p>
+    <p>Projeto fã de Terraria — criado para aprendizado 🌱</p>
 </footer>
-    
-    <script src="index.js"></script>
 
 </body>
 </html>
