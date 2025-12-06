@@ -1,18 +1,24 @@
-console.log("Terraria RPG iniciado!");
-
 // MENU MOBILE
-const btn = document.querySelector("#menu-btn");
-const menu = document.querySelector("#menu");
+const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
 
 btn.addEventListener("click", () => {
-  menu.classList.toggle("show");
+    menu.classList.toggle("show");
 });
 
-// THEME SWITCH
-const themeBtn = document.querySelector("#theme-btn");
+// FECHAR MENU AO CLICAR
+document.querySelectorAll(".main-nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("show");
+    });
+});
 
-themeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("light");
-  themeBtn.textContent =
-    document.body.classList.contains("light") ? "🌙 Tema Escuro" : "☀️ Tema Claro";
+// EFEITO VIDA (leve)
+document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        card.style.transform = "scale(1.1)";
+    });
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "scale(1)";
+    });
 });
