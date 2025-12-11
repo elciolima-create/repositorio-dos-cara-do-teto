@@ -1,228 +1,192 @@
-/* ============================
-   TEMA TERRARIA FINAL
-   FUNDO ANIMADO + PIXEL ART
-============================ */
+/* index.css — Fundo estilo Terraria SEM IMAGENS (apenas CSS) */
 
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:"Trebuchet MS",Arial,sans-serif;color:#fff;}
+
+/* =============== Corpo e "céu" =============== */
+body{
+  min-height:100%;
+  /* céu com dois tons (gradiente) */
+  background:
+    linear-gradient(#8fd7ff 0%, #6cc9ff 40%, #4faed1 65% , #3a8fb2 100%);
+  overflow-x:hidden;
 }
 
-body {
-  font-family: "Trebuchet MS", sans-serif;
-  color: white;
-  overflow-x: hidden;
-  image-rendering: pixelated;
-  background: #6dc4ff;
+/* efeito de "blocos" sutis no céu (padrão pixel) */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 8px),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 8px);
+  mix-blend-mode: overlay;
+  opacity:0.35;
+  z-index:-5;
+  image-rendering:pixelated;
 }
 
-/* ============================
-   CAMADAS DO FUNDO
-============================ */
-
-.bg-layer {
-  position: fixed;
-  width: 300%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-repeat: repeat-x;
-  background-size: cover;
-  image-rendering: pixelated;
-  z-index: -10;
+/* =============== Montanhas (camadas com clip-path) =============== */
+.mountain-layer{
+  position:fixed;
+  left:-10%;
+  width:120%;
+  height:280px;
+  bottom:180px;
+  z-index:-4;
+  pointer-events:none;
 }
 
-/* Céu */
-#bg-sky {
-  background-image: url("https://i.imgur.com/0Z3K7Yt.png");
-  animation: moveSky 140s linear infinite;
+/* base para todas as montanhas: forma irregular com clip-path */
+.mountain-layer.m1{
+  background: linear-gradient(180deg,#2e6b3f,#245433);
+  clip-path: polygon(
+    0% 70%,6% 40%,12% 65%,20% 32%,26% 68%,34% 38%,42% 72%,
+    50% 45%,58% 75%,66% 36%,74% 68%,82% 42%,90% 70%,100% 60%,100% 100%,0% 100%);
+  opacity:0.95;
+  transform:translateZ(0);
+  filter: drop-shadow(0 12px 14px rgba(0,0,0,0.35));
 }
 
-/* Montanhas */
-#bg-mountains {
-  background-image: url("https://i.imgur.com/Vua5tYo.png");
-  background-size: auto 260px;
-  background-position: bottom;
-  animation: moveMountains 60s linear infinite;
+.mountain-layer.m2{
+  bottom:140px;
+  height:200px;
+  background: linear-gradient(180deg,#346c48,#2a5a3b);
+  clip-path: polygon(
+    0% 80%,8% 48%,16% 78%,24% 40%,32% 75%,40% 42%,48% 78%,56% 50%,
+    64% 80%,72% 46%,80% 78%,88% 52%,96% 80%,100% 100%,0% 100%);
+  opacity:0.9;
+  transform:translateZ(0);
+  filter: drop-shadow(0 8px 10px rgba(0,0,0,0.28));
 }
 
-/* Árvores */
-#bg-trees {
-  background-image: url("https://i.imgur.com/iPAJq8j.png");
-  background-size: auto 300px;
-  background-position: bottom;
-  animation: moveTrees 30s linear infinite;
+/* =============== Árvores como formas (camada frontal) =============== */
+.trees-layer{
+  position:fixed;
+  left:0;
+  width:100%;
+  height:260px;
+  bottom:110px;
+  z-index:-3;
+  pointer-events:none;
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-end;
+  padding:0 3%;
 }
 
-/* Nuvens */
-.cloud {
-  position: fixed;
-  width: 200px;
-  image-rendering: pixelated;
-  opacity: 0.9;
-  z-index: -3;
-  animation: cloudMove 55s linear infinite;
+/* árvore "pixel" feita com gradientes e sombras */
+.tree{
+  width:90px;
+  height:160px;
+  position:relative;
+  transform-origin:bottom center;
 }
 
-/* ============================
-   ANIMAÇÕES PARALLAX
-============================ */
-
-@keyframes moveSky {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-33%); }
+.tree::before{ /* tronco */
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:18px;
+  height:60px;
+  background:linear-gradient(#6b3e1b,#4c2b12);
+  border-radius:3px;
+  box-shadow: inset 0 -4px 6px rgba(0,0,0,0.3);
 }
 
-@keyframes moveMountains {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-66%); }
+.tree::after{ /* copa - blocos */
+  content:"";
+  position:absolute;
+  bottom:48px;
+  left:50%;
+  transform:translateX(-50%);
+  width:140px;
+  height:110px;
+  background:
+    linear-gradient(#57a34a,#2f7b2a);
+  border-radius:14px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  clip-path: polygon(
+    5% 65%,12% 45%,18% 60%,26% 38%,34% 62%,42% 44%,50% 68%,
+    58% 40%,66% 64%,74% 46%,82% 67%,92% 50%,95% 70%,95% 100%,5% 100%);
 }
 
-@keyframes moveTrees {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+/* ligeiro "pixel look" com borda */
+.tree .leaf-pixel{
+  position:absolute;
+  bottom:48px;
+  left:50%;
+  transform:translateX(-50%);
+  width:140px;
+  height:110px;
+  box-shadow:
+    0 0 0 6px rgba(0,0,0,0.06) inset;
+  mix-blend-mode:multiply;
+  opacity:0.95;
 }
 
-@keyframes cloudMove {
-  0% { transform: translateX(-600px); }
-  100% { transform: translateX(150vw); }
+/* =============== Faixa de grama/terra no rodapé =============== */
+.ground-strip{
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:110px;
+  background:
+    linear-gradient(180deg,#7b4a20 0%, #6b3d18 30%, #5a3314 100%),
+    repeating-linear-gradient(90deg,#7b4a20 0 32px,#6b3d18 32px 64px);
+  border-top:6px solid #4a2b10;
+  z-index:-1;
 }
 
-/* =============================
-   HEADER
-============================= */
-
-.header {
-  background: rgba(0, 0, 0, 0.7);
-  border-bottom: 4px solid #1f4ea3;
-  padding: 14px 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+/* "grama" pixelizada no topo da faixa */
+.ground-strip::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:-28px;
+  width:100%;
+  height:36px;
+  background:
+    linear-gradient(180deg,#4bb04a 0%,#2f7b2a 100%);
+  clip-path: polygon(
+    0 100%, 4% 60%, 9% 100%, 14% 58%, 20% 100%, 26% 62%, 33% 100%,
+    40% 60%, 48% 100%, 56% 57%, 64% 100%, 72% 60%, 80% 100%, 88% 62%,
+    96% 100%, 100% 60%);
+  image-rendering:pixelated;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.35));
 }
 
-.header-container {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* =============== header, hero, cards styling (integração) =============== */
+.header{
+  background:rgba(0,0,0,0.6);
+  border-bottom:4px solid #1f4ea3;
+  padding:14px 0;
+  position:sticky;top:0;z-index:5;
 }
+.header-container{width:92%;max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{height:56px;image-rendering:pixelated;filter:drop-shadow(2px 2px 6px #000)}
+.menu{display:flex;gap:12px}
+.menu a{padding:10px 14px;background:#4e8ed8;border-radius:8px;border:2px solid #1b4d89;color:#fffbb3;text-decoration:none;font-weight:700;text-shadow:2px 2px 3px #000;transition:0.15s}
+.menu a:hover,.menu a.active{background:#2f66b8;transform:scale(1.04)}
 
-.logo {
-  height: 60px;
-  image-rendering: pixelated;
-  filter: drop-shadow(3px 3px 4px #000);
-}
+/* hero/cards/boxes */
+.hero{padding:90px 20px 40px;text-align:center}
+.hero h1{font-size:3.2rem;color:#e6fff0;text-shadow:4px 4px 10px rgba(0,0,0,0.8)}
+.cards{width:92%;max-width:1100px;margin:34px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{padding:20px;background:rgba(0,0,0,0.55);border:3px solid rgba(255,255,255,0.06);border-radius:12px;text-align:center;color:#fff;transition:0.18s;box-shadow:0 8px 18px rgba(0,0,0,0.45)}
+.card:hover{transform:translateY(-6px);background:rgba(0,0,0,0.75)}
+.sobre{padding:40px 18px}
+.sobre-box{max-width:900px;margin:0 auto;background:rgba(0,0,0,0.48);padding:22px;border-radius:12px;border:2px solid rgba(255,255,255,0.04)}
 
-/* MENU */
-.menu {
-  display: flex;
-  gap: 12px;
-}
-
-.menu a {
-  padding: 10px 16px;
-  background: #4e8ed8;
-  border: 3px solid #1b4d89;
-  border-radius: 8px;
-  color: #fffbb3;
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow: 2px 2px 3px #000;
-  transition: 0.2s;
-}
-
-.menu a:hover,
-.menu a.active {
-  background: #2f66b8;
-  transform: scale(1.08);
-}
-
-/* =============================
-   HERO
-============================= */
-
-.hero {
-  text-align: center;
-  padding: 100px 20px 60px;
-}
-
-.hero h1 {
-  font-size: 3.2rem;
-  text-shadow: 4px 4px 8px #000;
-}
-
-.hero p {
-  margin-top: 12px;
-  font-size: 1.3rem;
-  text-shadow: 3px 3px 6px #000;
-}
-
-/* =============================
-   CARDS
-============================= */
-
-.cards {
-  width: 90%;
-  margin: 40px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-}
-
-.card {
-  padding: 20px;
-  background: rgba(0,0,0,0.55);
-  border: 3px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  box-shadow: 0 0 12px rgba(0,0,0,0.6);
-  transition: 0.25s;
-}
-
-.card:hover {
-  transform: translateY(-6px) scale(1.03);
-  background: rgba(0,0,0,0.75);
-}
-
-/* =============================
-   SOBRE
-============================= */
-
-.sobre {
-  padding: 50px 20px;
-}
-
-.sobre-box {
-  width: 90%;
-  max-width: 900px;
-  margin: auto;
-  background: rgba(0,0,0,0.55);
-  border-radius: 14px;
-  border: 3px solid rgba(255,255,255,0.08);
-  padding: 26px;
-  box-shadow: 0 0 18px rgba(0,0,0,0.5);
-}
-
-.sobre-box h2 {
-  text-align: center;
-  margin-bottom: 12px;
-  font-size: 2.1rem;
-  text-shadow: 3px 3px 6px #000;
-}
-
-/* =============================
-   FOOTER
-============================= */
-
-.footer {
-  text-align: center;
-  padding: 22px;
-  background: rgba(0,0,0,0.7);
-  border-top: 4px solid #1f4ea3;
+/* =============== responsivo =============== */
+@media (max-width:880px){
+  .tree{width:60px;height:110px}
+  .tree::after{width:100px;height:80px}
+  .hero h1{font-size:2.2rem}
+  .cards{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 }
