@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terraria — Enciclopédia PT-BR</title>
 
+  <!-- agora o CSS correto -->
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -12,8 +13,6 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container">
-
-      <!-- LOGO COLOCADA AQUI -->
       <img src="terraria-logo.png" class="logo-img" alt="Logo Terraria">
 
       <button id="menu-btn" class="menu-btn">☰</button>
@@ -30,47 +29,70 @@
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Terraria — Enciclopédia Completa PT-BR</h1>
-    <p>Guia completo de armas, chefes, biomas, NPCs e progressão.</p>
-
-    <input id="busca" class="campo-busca"
-           type="search"
-           placeholder="Buscar no site... (ex: Minishark)">
+    <h1>Enciclopédia Terraria PT-BR</h1>
+    <p>O melhor lugar para encontrar informações completas sobre armas, chefes, biomas e NPCs.</p>
   </section>
 
   <!-- CARDS -->
   <section class="cards">
     <a href="armas.html" class="card">
       <h3>Armas</h3>
-      <p>Lista completa com dano, tipo, obtenção e raridade.</p>
+      <p>Tipos, danos, raridades e crafting.</p>
     </a>
 
     <a href="chefes.html" class="card">
       <h3>Chefes</h3>
-      <p>Como invocar, estratégias, loot e progressão.</p>
+      <p>Invocações, estratégias e recompensas.</p>
     </a>
 
     <a href="biomas.html" class="card">
       <h3>Biomas</h3>
-      <p>Informações detalhadas de cada bioma do jogo.</p>
+      <p>Ambientes, inimigos e recursos.</p>
     </a>
 
     <a href="npcs.html" class="card">
       <h3>NPCs</h3>
-      <p>Spawn, felicidade, casas e itens vendidos.</p>
+      <p>Spawn, felicidade e itens vendidos.</p>
     </a>
   </section>
 
-  <!-- SOBRE -->
+  <!-- APRESENTAÇÃO DO SITE -->
+  <section class="section">
+    <div class="content-block">
+      <h2>Sobre este site</h2>
+      <p>
+        Esta enciclopédia foi criada para ajudar jogadores de Terraria com informações organizadas
+        e completas em português. Aqui você encontra:
+      </p>
+
+      <ul style="margin-left: 25px; margin-top: 12px;">
+        <li>Listas completas de armas</li>
+        <li>Guias sobre todos os chefes</li>
+        <li>Descrição de cada bioma</li>
+        <li>Todas as informações dos NPCs</li>
+      </ul>
+
+      <br>
+
+      <p>
+        Este site é feito por fãs, para fãs, e é atualizado constantemente com novas informações.
+      </p>
+    </div>
+  </section>
+
+  <!-- SOBRE TERRAIA -->
   <section class="section">
     <div class="content-block">
       <h2>O que é Terraria?</h2>
-      <p>Terraria é um jogo sandbox 2D focado em combate, crafting e exploração. Aqui você encontra uma enciclopédia completa para jogadores novos e experientes.</p>
+      <p>
+        Terraria é um jogo sandbox 2D de aventura e exploração. Ele mistura combate, crafting,
+        construção e progressão contra dezenas de chefes e eventos.
+      </p>
     </div>
   </section>
 
   <footer class="site-footer">
-    <p>Site criado por fã — pronto para GitHub Pages</p>
+    <p>Enciclopédia Terraria PT-BR — Criado por fãs</p>
   </footer>
 
   <script src="script.js"></script>
