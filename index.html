@@ -1,123 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Terraria — Enciclopédia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terraria — Enciclopédia PT-BR</title>
 
-  <!-- CSS da página inicial -->
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="style-index.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
 
-    <!-- LOGO -->
-    <img src="terraria-logo.png" alt="Terraria Logo" class="logo-img">
+      <!-- LOGO COLOCADA AQUI -->
+      <img src="terraria-logo.png" class="logo-img" alt="Logo Terraria">
 
-    <!-- MENU -->
-    <nav class="main-nav">
-      <a href="index.html" class="active">Início</a>
-      <a href="armas.html">Armas</a>
-      <a href="chefes.html">Chefes</a>
-      <a href="biomas.html">Biomas</a>
-      <a href="npcs.html">NPCs</a>
-    </nav>
+      <button id="menu-btn" class="menu-btn">☰</button>
 
-  </div>
-</header>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="active">Início</a>
+        <a href="armas.html">Armas</a>
+        <a href="chefes.html">Chefes</a>
+        <a href="biomas.html">Biomas</a>
+        <a href="npcs.html">NPCs</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Terraria</h1>
-  <p>
-    Um jogo de aventura, exploração e sobrevivência em 2D
-    com mundos gerados aleatoriamente, chefes épicos
-    e milhares de itens para descobrir.
-  </p>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Terraria — Enciclopédia Completa PT-BR</h1>
+    <p>Guia completo de armas, chefes, biomas, NPCs e progressão.</p>
 
-<!-- SOBRE O JOGO -->
-<section class="section">
-  <h2>Sobre o Jogo</h2>
-  <p>
-    Terraria é um jogo sandbox desenvolvido pela Re-Logic.
-    O jogador começa com ferramentas simples e evolui
-    explorando o mundo, minerando recursos, criando armas
-    e enfrentando chefes cada vez mais poderosos.
-  </p>
-</section>
+    <input id="busca" class="campo-busca"
+           type="search"
+           placeholder="Buscar no site... (ex: Minishark)">
+  </section>
 
-<!-- PROGRESSÃO -->
-<section class="section darker">
-  <h2>Progressão no Jogo</h2>
+  <!-- CARDS -->
+  <section class="cards">
+    <a href="armas.html" class="card">
+      <h3>Armas</h3>
+      <p>Lista completa com dano, tipo, obtenção e raridade.</p>
+    </a>
 
-  <ul class="progress-list">
-    <li><strong>Início:</strong> exploração, coleta de recursos e construção.</li>
-    <li><strong>Pré-Hardmode:</strong> primeiros chefes e equipamentos básicos.</li>
-    <li><strong>Hardmode:</strong> mundo mais difícil após a Parede de Carne.</li>
-    <li><strong>Final:</strong> eventos avançados e o Lorde da Lua.</li>
-  </ul>
-</section>
+    <a href="chefes.html" class="card">
+      <h3>Chefes</h3>
+      <p>Como invocar, estratégias, loot e progressão.</p>
+    </a>
 
-<!-- DESTAQUES -->
-<section class="cards">
-  <div class="card">
-    <h3>Construção</h3>
-    <p>
-      Crie casas, castelos e estruturas enormes usando centenas
-      de blocos e materiais diferentes.
-    </p>
-  </div>
+    <a href="biomas.html" class="card">
+      <h3>Biomas</h3>
+      <p>Informações detalhadas de cada bioma do jogo.</p>
+    </a>
 
-  <div class="card">
-    <h3>Combate</h3>
-    <p>
-      Use armas corpo a corpo, mágicas, de longo alcance
-      e invocação para derrotar inimigos.
-    </p>
-  </div>
+    <a href="npcs.html" class="card">
+      <h3>NPCs</h3>
+      <p>Spawn, felicidade, casas e itens vendidos.</p>
+    </a>
+  </section>
 
-  <div class="card">
-    <h3>Exploração</h3>
-    <p>
-      Explore cavernas, masmorras, biomas perigosos
-      e dimensões únicas.
-    </p>
-  </div>
-</section>
+  <!-- SOBRE -->
+  <section class="section">
+    <div class="content-block">
+      <h2>O que é Terraria?</h2>
+      <p>Terraria é um jogo sandbox 2D focado em combate, crafting e exploração. Aqui você encontra uma enciclopédia completa para jogadores novos e experientes.</p>
+    </div>
+  </section>
 
-<!-- CATEGORIAS -->
-<section class="cards">
-  <a href="armas.html" class="card link">
-    <h3>Armas</h3>
-    <p>Lista completa por categoria e progressão.</p>
-  </a>
+  <footer class="site-footer">
+    <p>Site criado por fã — pronto para GitHub Pages</p>
+  </footer>
 
-  <a href="chefes.html" class="card link">
-    <h3>Chefes</h3>
-    <p>Invocação, estratégias e recompensas.</p>
-  </a>
-
-  <a href="biomas.html" class="card link">
-    <h3>Biomas</h3>
-    <p>Todas as regiões do mundo de Terraria.</p>
-  </a>
-
-  <a href="npcs.html" class="card link">
-    <h3>NPCs</h3>
-    <p>Como desbloquear e o que cada um vende.</p>
-  </a>
-</section>
-
-<footer class="site-footer">
-  <p>
-    Enciclopédia de Terraria — Projeto educacional<br>
-    Criado para estudos de HTML, CSS e JavaScript
-  </p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
