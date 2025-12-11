@@ -1,159 +1,228 @@
-/* ================================
-   TEMA VISUAL TERRARIA REAL
-================================ */
+/* ============================
+   TEMA TERRARIA FINAL
+   FUNDO ANIMADO + PIXEL ART
+============================ */
 
 /* RESET */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family:"Trebuchet MS", sans-serif;
-  color:white;
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  color: white;
+  overflow-x: hidden;
   image-rendering: pixelated;
-
-  /* CAMADAS DO TERRARIA */
-  background-image:
-    url("https://raw.githubusercontent.com/ElcioChatGPT/TerrariaBackgrounds/main/trees.png"),
-    url("https://raw.githubusercontent.com/ElcioChatGPT/TerrariaBackgrounds/main/mountains.png"),
-    url("https://raw.githubusercontent.com/ElcioChatGPT/TerrariaBackgrounds/main/sky.png");
-  
-  background-repeat: repeat-x, repeat-x, repeat-x;
-  background-position: bottom, center, top;
-  background-size: auto 260px, auto 260px, cover;
-  background-color: #6dc4ff;
+  background: #6dc4ff;
 }
 
-/* ================================
+/* ============================
+   CAMADAS DO FUNDO
+============================ */
+
+.bg-layer {
+  position: fixed;
+  width: 300%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-repeat: repeat-x;
+  background-size: cover;
+  image-rendering: pixelated;
+  z-index: -10;
+}
+
+/* Céu */
+#bg-sky {
+  background-image: url("https://i.imgur.com/0Z3K7Yt.png");
+  animation: moveSky 140s linear infinite;
+}
+
+/* Montanhas */
+#bg-mountains {
+  background-image: url("https://i.imgur.com/Vua5tYo.png");
+  background-size: auto 260px;
+  background-position: bottom;
+  animation: moveMountains 60s linear infinite;
+}
+
+/* Árvores */
+#bg-trees {
+  background-image: url("https://i.imgur.com/iPAJq8j.png");
+  background-size: auto 300px;
+  background-position: bottom;
+  animation: moveTrees 30s linear infinite;
+}
+
+/* Nuvens */
+.cloud {
+  position: fixed;
+  width: 200px;
+  image-rendering: pixelated;
+  opacity: 0.9;
+  z-index: -3;
+  animation: cloudMove 55s linear infinite;
+}
+
+/* ============================
+   ANIMAÇÕES PARALLAX
+============================ */
+
+@keyframes moveSky {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33%); }
+}
+
+@keyframes moveMountains {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-66%); }
+}
+
+@keyframes moveTrees {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes cloudMove {
+  0% { transform: translateX(-600px); }
+  100% { transform: translateX(150vw); }
+}
+
+/* =============================
    HEADER
-================================ */
-.header{
-  background:rgba(0,0,0,0.7);
-  border-bottom:4px solid #1f4ea3;
-  padding:14px 0;
-  position:sticky;
-  top:0;
-  z-index:20;
+============================= */
+
+.header {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 4px solid #1f4ea3;
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.header-container{
-  width:90%;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+.header-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo{
-  height:60px;
-  image-rendering:pixelated;
-  filter:drop-shadow(3px 3px 4px #000);
+.logo {
+  height: 60px;
+  image-rendering: pixelated;
+  filter: drop-shadow(3px 3px 4px #000);
 }
 
 /* MENU */
-.menu{
-  display:flex;
-  gap:12px;
+.menu {
+  display: flex;
+  gap: 12px;
 }
 
-.menu a{
-  padding:10px 16px;
-  background:#4e8ed8;
-  border:3px solid #1b4d89;
-  border-radius:8px;
-  color:#fffbb3;
-  font-weight:bold;
-  text-decoration:none;
-  text-shadow:2px 2px 3px #000;
-  transition:0.2s;
+.menu a {
+  padding: 10px 16px;
+  background: #4e8ed8;
+  border: 3px solid #1b4d89;
+  border-radius: 8px;
+  color: #fffbb3;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 2px 2px 3px #000;
+  transition: 0.2s;
 }
 
 .menu a:hover,
-.menu a.active{
-  background:#2f66b8;
-  transform:scale(1.08);
+.menu a.active {
+  background: #2f66b8;
+  transform: scale(1.08);
 }
 
-/* ================================
+/* =============================
    HERO
-================================ */
-.hero{
-  text-align:center;
-  padding:100px 20px 60px;
+============================= */
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
 }
 
-.hero h1{
-  font-size:3.2rem;
-  text-shadow:4px 4px 8px #000;
+.hero h1 {
+  font-size: 3.2rem;
+  text-shadow: 4px 4px 8px #000;
 }
 
-.hero p{
-  margin-top:12px;
-  font-size:1.3rem;
-  text-shadow:3px 3px 6px #000;
+.hero p {
+  margin-top: 12px;
+  font-size: 1.3rem;
+  text-shadow: 3px 3px 6px #000;
 }
 
-/* ================================
+/* =============================
    CARDS
-================================ */
-.cards{
-  width:90%;
-  margin:40px auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
-  gap:25px;
+============================= */
+
+.cards {
+  width: 90%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
 }
 
-.card{
-  padding:20px;
-  background:rgba(0,0,0,0.55);
-  border:3px solid rgba(255,255,255,0.08);
-  border-radius:12px;
-  text-align:center;
-  text-decoration:none;
-  color:white;
-  box-shadow:0 0 12px rgba(0,0,0,0.6);
-  transition:0.25s;
+.card {
+  padding: 20px;
+  background: rgba(0,0,0,0.55);
+  border: 3px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 12px rgba(0,0,0,0.6);
+  transition: 0.25s;
 }
 
-.card:hover{
-  transform:translateY(-6px) scale(1.03);
-  background:rgba(0,0,0,0.75);
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  background: rgba(0,0,0,0.75);
 }
 
-/* ================================
+/* =============================
    SOBRE
-================================ */
-.sobre{
-  padding:50px 20px;
+============================= */
+
+.sobre {
+  padding: 50px 20px;
 }
 
-.sobre-box{
-  width:90%;
-  max-width:900px;
-  margin:auto;
-  background:rgba(0,0,0,0.55);
-  border-radius:14px;
-  border:3px solid rgba(255,255,255,0.08);
-  padding:26px;
-  box-shadow:0 0 18px rgba(0,0,0,0.5);
+.sobre-box {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  background: rgba(0,0,0,0.55);
+  border-radius: 14px;
+  border: 3px solid rgba(255,255,255,0.08);
+  padding: 26px;
+  box-shadow: 0 0 18px rgba(0,0,0,0.5);
 }
 
-.sobre-box h2{
-  text-align:center;
-  margin-bottom:12px;
-  font-size:2.1rem;
-  text-shadow:3px 3px 6px #000;
+.sobre-box h2 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 2.1rem;
+  text-shadow: 3px 3px 6px #000;
 }
 
-/* ================================
+/* =============================
    FOOTER
-================================ */
-.footer{
-  text-align:center;
-  padding:22px;
-  background:rgba(0,0,0,0.7);
-  border-top:4px solid #1f4ea3;
+============================= */
+
+.footer {
+  text-align: center;
+  padding: 22px;
+  background: rgba(0,0,0,0.7);
+  border-top: 4px solid #1f4ea3;
 }
