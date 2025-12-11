@@ -1,207 +1,159 @@
-/* ===========================
-   ENCICLOPÉDIA TERRARIA — CSS
-   Fundo nítido / estilo Terraria
-=========================== */
+/* ================================
+   TEMA VISUAL TERRARIA REAL
+================================ */
 
 /* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-html, body {
-  height: 100%;
-  font-family: "Trebuchet MS", Arial, sans-serif;
-  color: #ffffff;
-}
+body{
+  font-family:"Trebuchet MS", sans-serif;
+  color:white;
+  image-rendering: pixelated;
 
-/* ===========================
-   FUNDO TERRARIA — AGORA FUNCIONANDO
-=========================== */
-
-body {
+  /* CAMADAS DO TERRARIA */
   background-image:
-    url("https://raw.githubusercontent.com/ElcioChatGPT/TerrariaBackgrounds/main/terraria-sky.png"),   /* céu */
-    url("https://raw.githubusercontent.com/ElcioChatGPT/TerrariaBackgrounds/main/terraria-grass.png"); /* grama */
-  background-repeat: repeat-x, repeat-x;
-  background-position: top, bottom;
-  background-size: cover, 128px;
-  background-color: #6dc4ff; /* fallback */
-  image-rendering: pixelated;
+    url("https://raw.githubusercontent.com/ElcioChatGPT/TerrariaBackgrounds/main/trees.png"),
+    url("https://raw.githubusercontent.com/ElcioChatGPT/TerrariaBackgrounds/main/mountains.png"),
+    url("https://raw.githubusercontent.com/ElcioChatGPT/TerrariaBackgrounds/main/sky.png");
+  
+  background-repeat: repeat-x, repeat-x, repeat-x;
+  background-position: bottom, center, top;
+  background-size: auto 260px, auto 260px, cover;
+  background-color: #6dc4ff;
 }
 
-/* ===========================
+/* ================================
    HEADER
-=========================== */
-
-.site-header {
-  background: rgba(0, 0, 0, 0.65);
-  padding: 14px 0;
-  border-bottom: 4px solid #1f4ea3;
-  position: sticky;
-  top: 0;
-  z-index: 50;
+================================ */
+.header{
+  background:rgba(0,0,0,0.7);
+  border-bottom:4px solid #1f4ea3;
+  padding:14px 0;
+  position:sticky;
+  top:0;
+  z-index:20;
 }
 
-.container {
-  width: 92%;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.header-container{
+  width:90%;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-/* Logo Terraria */
-.logo-img {
-  height: 60px;
-  image-rendering: pixelated;
-  filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.9));
+.logo{
+  height:60px;
+  image-rendering:pixelated;
+  filter:drop-shadow(3px 3px 4px #000);
 }
 
-.menu-btn {
-  display: none;
-  background: #4e8ed8;
-  padding: 8px 14px;
-  border-radius: 8px;
-  border: 2px solid #1b4d89;
-  color: #fffbb3;
-  font-size: 22px;
-  cursor: pointer;
+/* MENU */
+.menu{
+  display:flex;
+  gap:12px;
 }
 
-.main-nav {
-  display: flex;
-  gap: 12px;
+.menu a{
+  padding:10px 16px;
+  background:#4e8ed8;
+  border:3px solid #1b4d89;
+  border-radius:8px;
+  color:#fffbb3;
+  font-weight:bold;
+  text-decoration:none;
+  text-shadow:2px 2px 3px #000;
+  transition:0.2s;
 }
 
-.main-nav a {
-  text-decoration: none;
-  padding: 8px 14px;
-  color: #ffeab0;
-  background: #4e8ed8;
-  border-radius: 8px;
-  border: 2px solid #1b4d89;
-  text-shadow: 2px 2px 4px #000;
-  transition: 0.2s;
+.menu a:hover,
+.menu a.active{
+  background:#2f66b8;
+  transform:scale(1.08);
 }
 
-.main-nav a:hover {
-  background: #2f66b8;
-}
-
-/* ===========================
+/* ================================
    HERO
-=========================== */
-
-.hero {
-  text-align: center;
-  padding: 80px 20px 60px;
+================================ */
+.hero{
+  text-align:center;
+  padding:100px 20px 60px;
 }
 
-.hero h1 {
-  font-size: 3.1rem;
-  text-shadow: 4px 4px 10px rgba(0,0,0,0.7);
+.hero h1{
+  font-size:3.2rem;
+  text-shadow:4px 4px 8px #000;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-top: 12px;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+.hero p{
+  margin-top:12px;
+  font-size:1.3rem;
+  text-shadow:3px 3px 6px #000;
 }
 
-/* ===========================
+/* ================================
    CARDS
-=========================== */
-
-.cards {
-  width: 92%;
-  max-width: 1100px;
-  margin: 40px auto 60px;
-  display: grid;
-  gap: 22px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+================================ */
+.cards{
+  width:90%;
+  margin:40px auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+  gap:25px;
 }
 
-.card {
-  padding: 22px;
-  background: rgba(0,0,0,0.6);
-  border-radius: 12px;
-  border: 3px solid rgba(255,255,255,0.07);
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  transition: 0.25s;
-  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+.card{
+  padding:20px;
+  background:rgba(0,0,0,0.55);
+  border:3px solid rgba(255,255,255,0.08);
+  border-radius:12px;
+  text-align:center;
+  text-decoration:none;
+  color:white;
+  box-shadow:0 0 12px rgba(0,0,0,0.6);
+  transition:0.25s;
 }
 
-.card:hover {
-  background: rgba(0,0,0,0.8);
-  transform: translateY(-6px) scale(1.03);
+.card:hover{
+  transform:translateY(-6px) scale(1.03);
+  background:rgba(0,0,0,0.75);
 }
 
-/* ===========================
-   SEÇÕES
-=========================== */
-
-.section {
-  padding: 30px 20px;
+/* ================================
+   SOBRE
+================================ */
+.sobre{
+  padding:50px 20px;
 }
 
-.content-block {
-  max-width: 900px;
-  margin: auto;
-  background: rgba(0,0,0,0.55);
-  padding: 26px;
-  border-radius: 14px;
-  border: 3px solid rgba(255,255,255,0.06);
-  box-shadow: 0 0 18px rgba(0,0,0,0.5);
+.sobre-box{
+  width:90%;
+  max-width:900px;
+  margin:auto;
+  background:rgba(0,0,0,0.55);
+  border-radius:14px;
+  border:3px solid rgba(255,255,255,0.08);
+  padding:26px;
+  box-shadow:0 0 18px rgba(0,0,0,0.5);
 }
 
-.content-block h2 {
-  font-size: 2.1rem;
-  margin-bottom: 14px;
+.sobre-box h2{
+  text-align:center;
+  margin-bottom:12px;
+  font-size:2.1rem;
+  text-shadow:3px 3px 6px #000;
 }
 
-.content-block p,
-.content-block li {
-  font-size: 1.15rem;
-  line-height: 1.6;
-}
-
-/* ===========================
+/* ================================
    FOOTER
-=========================== */
-
-.site-footer {
-  text-align: center;
-  padding: 22px;
-  background: rgba(0,0,0,0.65);
-  border-top: 4px solid #1f4ea3;
-  text-shadow: 2px 2px 4px #000;
-  margin-top: 40px;
-}
-
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media (max-width: 880px) {
-  .menu-btn { display: block; }
-
-  .main-nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  .main-nav.open {
-    display: flex;
-  }
-
-  .hero h1 { font-size: 2.3rem; }
-  .hero p { font-size: 1rem; }
+================================ */
+.footer{
+  text-align:center;
+  padding:22px;
+  background:rgba(0,0,0,0.7);
+  border-top:4px solid #1f4ea3;
 }
