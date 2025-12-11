@@ -1,138 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Armas — Terraria RPG</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Armas — Terraria Enciclopédia PT-BR</title>
   <link rel="stylesheet" href="armas.css">
 </head>
+
 <body>
 
-<header class="header">
-  <div class="logo">🌿 Terraria RPG</div>
-  <button id="menu-btn" class="menu-btn">☰</button>
+  <!-- ===== CENÁRIO TERRARIA ===== -->
+  <div class="mountain-layer m1"></div>
+  <div class="mountain-layer m2"></div>
 
-  <nav id="menu" class="nav">
-    <a href="index.html">Início</a>
-    <a href="armas.html">Armas</a>
-    <a href="chefes.html">Chefes</a>
-    <a href="biomas.html">Biomas</a>
-    <a href="npcs.html">NPCs</a>
-  </nav>
-</header>
+  <div class="trees-layer">
+    <div class="tree"><span class="leaf-pixel"></span></div>
+    <div class="tree"><span class="leaf-pixel"></span></div>
+    <div class="tree"><span class="leaf-pixel"></span></div>
+    <div class="tree"><span class="leaf-pixel"></span></div>
+  </div>
 
-<main>
-  <section class="hero" style="padding:30px 20px;">
-    <h1>⚔️ Armas — Guia Completo</h1>
-    <p>Resumo prático sobre classes de armas, tiers, estatísticas e como consegui-las.</p>
+  <div class="ground-strip"></div>
+  <!-- ============================ -->
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <span class="logo-text">Terraria Wiki</span>
+
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a class="active" href="armas.html">Armas</a>
+        <a href="chefes.html">Chefes</a>
+        <a href="biomas.html">Biomas</a>
+        <a href="npcs.html">NPCs</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-armas">
+    <h1>Armas do Terraria</h1>
+    <p>Armas organizadas por tipo e progressão do jogo.</p>
   </section>
 
-  <!-- Overview -->
-  <section class="grid-categorias" style="padding:20px; gap:18px;">
-    <article class="card">
-      <h2>Melee (Corpo a Corpo)</h2>
-      <p>Espadas, lanças, martelos e armas de golpe — alta consistência de dano.</p>
-      <ul style="text-align:left;margin-top:10px;">
-        <li><strong>Exemplo inicial:</strong> Espada de Cobre — craft com barras de cobre.</li>
-        <li><strong>Bom para:</strong> jogadores que gostam de ficar perto do inimigo.</li>
-      </ul>
-    </article>
+  <section class="armas-container">
 
-    <article class="card">
-      <h2>Ranged (À distância)</h2>
-      <p>Arcos, bestas, armas de fogo e armas que usam munição.</p>
-      <ul style="text-align:left;margin-top:10px;">
-        <li><strong>Exemplo inicial:</strong> Arco de Madeira + flechas.</li>
-        <li><strong>Bom para:</strong> explorar e evitar dano corpo a corpo.</li>
-      </ul>
-    </article>
+    <!-- ============================ -->
+    <!-- MELEE                       -->
+    <!-- ============================ -->
+    <h2 class="categoria">⚔️ Armas Melee (Corpo a Corpo)</h2>
 
-    <article class="card">
-      <h2>Mage (Mágica)</h2>
-      <p>Runas, varinhas e bastões que consomem mana — alto dano mágico.</p>
-      <ul style="text-align:left;margin-top:10px;">
-        <li><strong>Exemplo inicial:</strong> Wand / Wooden Staff (varia por versão).</li>
-        <li><strong>Dica:</strong> combine com acessórios que aumentem mana e redução de consumo.</li>
-      </ul>
-    </article>
+    <h3 class="subcat">📌 Pré-Hardmode</h3>
+    <div class="arma-lista">
+      <div class="arma-card"><h4>Espada de Cobre</h4></div>
+      <div class="arma-card"><h4>Espada de Ferro</h4></div>
+      <div class="arma-card"><h4>Katana</h4></div>
+      <div class="arma-card"><h4>Mandible Blade</h4></div>
+      <div class="arma-card"><h4>Blade of Grass</h4></div>
+      <div class="arma-card"><h4>Fiery Greatsword</h4></div>
+      <div class="arma-card"><h4>Muramasa</h4></div>
+      <div class="arma-card"><h4>Nights Edge</h4></div>
+      <div class="arma-card"><h4>Starfury</h4></div>
+      <div class="arma-card"><h4>Falcon Blade</h4></div>
+      <div class="arma-card"><h4>Bee Keeper</h4></div>
+    </div>
 
-    <article class="card">
-      <h2>Summoner (Invocação)</h2>
-      <p>Summons invocam minions que atacam por você. Boa para multitarefa.</p>
-    </article>
+    <h3 class="subcat">🔥 Hardmode</h3>
+    <div class="arma-lista">
+      <div class="arma-card"><h4>Breaker Blade</h4></div>
+      <div class="arma-card"><h4>Excalibur</h4></div>
+      <div class="arma-card"><h4>True Excalibur</h4></div>
+      <div class="arma-card"><h4>True Night’s Edge</h4></div>
+      <div class="arma-card"><h4>Terra Blade</h4></div>
+      <div class="arma-card"><h4>Seedler</h4></div>
+      <div class="arma-card"><h4>Influx Waver</h4></div>
+      <div class="arma-card"><h4>Meowmere</h4></div>
+      <div class="arma-card"><h4>Star Wrath</h4></div>
+      <div class="arma-card"><h4>Arkhalis</h4></div>
+    </div>
+
+
+    <!-- ============================ -->
+    <!-- RANGED                      -->
+    <!-- ============================ -->
+    <h2 class="categoria">🏹 Armas Ranged (Longo Alcance)</h2>
+
+    <h3 class="subcat">📌 Pré-Hardmode</h3>
+    <div class="arma-lista">
+      <div class="arma-card"><h4>Arco de Madeira</h4></div>
+      <div class="arma-card"><h4>Demon Bow</h4></div>
+      <div class="arma-card"><h4>Tendon Bow</h4></div>
+      <div class="arma-card"><h4>Molten Fury</h4></div>
+      <div class="arma-card"><h4>Phoenix Blaster</h4></div>
+      <div class="arma-card"><h4>Minishark</h4></div>
+    </div>
+
+    <h3 class="subcat">🔥 Hardmode</h3>
+    <div class="arma-lista">
+      <div class="arma-card"><h4>Megashark</h4></div>
+      <div class="arma-card"><h4>Chain Gun</h4></div>
+      <div class="arma-card"><h4>Daedalus Stormbow</h4></div>
+      <div class="arma-card"><h4>Tsunami</h4></div>
+      <div class="arma-card"><h4>Onyx Blaster</h4></div>
+      <div class="arma-card"><h4>Vortex Beater</h4></div>
+      <div class="arma-card"><h4>Phantasm</h4></div>
+    </div>
+
+
+    <!-- ============================ -->
+    <!-- MAGIC                       -->
+    <!-- ============================ -->
+    <h2 class="categoria">✨ Armas Mágicas (Magic)</h2>
+
+    <h3 class="subcat">📌 Pré-Hardmode</h3>
+    <div class="arma-lista">
+      <div class="arma-card"><h4>Wand of Sparking</h4></div>
+      <div class="arma-card"><h4>Magic Missile</hh4></div>
+      <div class="arma-card"><h4>Vilethorn</h4></div>
+      <div class="arma-card"><h4>Water Bolt</h4></div>
+      <div class="arma-card"><h4>Demon Scythe</h4></div>
+    </div>
+
+    <h3 class="subcat">🔥 Hardmode</h3>
+    <div class="arma-lista">
+      <div class="arma-card"><h4>Golden Shower</h4></div>
+      <div class="arma-card"><h4>Cursed Flames</h4></div>
+      <div class="arma-card"><h4>Shadowbeam Staff</h4></div>
+      <div class="arma-card"><h4>Bat Scepter</h4></div>
+      <div class="arma-card"><h4>Razorblade Typhoon</h4></div>
+      <div class="arma-card"><h4>Last Prism</h4></div>
+    </div>
+
+
+    <!-- ============================ -->
+    <!-- SUMMONER                    -->
+    <!-- ============================ -->
+    <h2 class="categoria">🐱 Summoner</h2>
+
+    <h3 class="subcat">📌 Pré-Hardmode</h3>
+    <div class="arma-lista">
+      <div class="arma-card"><h4>Slime Staff</h4></div>
+      <div class="arma-card"><h4>Hornet Staff</h4></div>
+      <div class="arma-card"><h4>Imp Staff</h4></div>
+    </div>
+
+    <h3 class="subcat">🔥 Hardmode</h3>
+    <div class="arma-lista">
+      <div class="arma-card"><h4>Spider Staff</h4></div>
+      <div class="arma-card"><h4>Pygmy Staff</h4></div>
+      <div class="arma-card"><h4>Tempest Staff</h4></div>
+      <div class="arma-card"><h4>Xeno Staff</h4></div>
+      <div class="arma-card"><h4>Terraprisma</h4></div>
+    </div>
+
   </section>
 
-  <!-- Tabela resumida de progressão -->
-  <section class="card" style="max-width:1100px;margin:22px auto;">
-    <h2>Progressão rápida (exemplo simplificado)</h2>
-    <table style="width:100%;border-collapse:collapse;text-align:left">
-      <thead>
-        <tr>
-          <th style="padding:8px;border-bottom:2px solid rgba(255,255,255,0.06)">Fase</th>
-          <th style="padding:8px;border-bottom:2px solid rgba(255,255,255,0.06)">Arma típica</th>
-          <th style="padding:8px;border-bottom:2px solid rgba(255,255,255,0.06)">Como obter</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding:8px">Início</td>
-          <td style="padding:8px">Espada de Cobre / Arco de Madeira</td>
-          <td style="padding:8px">Craft com barras de cobre / madeira</td>
-        </tr>
-        <tr>
-          <td style="padding:8px">Pré-Chefes</td>
-          <td style="padding:8px">Espada de Ferro / Arco de Ferro</td>
-          <td style="padding:8px">Minério do subsolo / forja</td>
-        </tr>
-        <tr>
-          <td style="padding:8px">Hardmode (após Wall of Flesh)</td>
-          <td style="padding:8px">Armas de minério avançado / armas de chefe</td>
-          <td style="padding:8px">Minérios de Hardmode / drops de chefes</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+  <footer class="footer">
+    <p>Terraria Enciclopédia — Criado por fãs</p>
+  </footer>
 
-  <!-- Exemplos detalhados -->
-  <section class="card" style="max-width:1100px;margin:22px auto;">
-    <h2>Exemplos detalhados</h2>
-
-    <article style="margin:12px 0;">
-      <h3>Espada de Cobre</h3>
-      <p><strong>Dano:</strong> 5 — <strong>Tipo:</strong> Melee — <strong>Uso:</strong> early game</p>
-      <p><strong>Como fazer:</strong> 8 barras de cobre + bancada de trabalho.</p>
-      <p><strong>Dica:</strong> atualize para lâminas com maior velocidade/knockback assim que possível.</p>
-    </article>
-
-    <article style="margin:12px 0;">
-      <h3>Arco de Madeira</h3>
-      <p><strong>Dano:</strong> 7 — <strong>Tipo:</strong> Ranged — <strong>Uso:</strong> early game</p>
-      <p><strong>Como fazer:</strong> 10 madeira + bancada.</p>
-      <p><strong>Dica:</strong> sempre carregue flechas variadas (normal, flaming, etc.).</p>
-    </article>
-
-    <article style="margin:12px 0;">
-      <h3>Varinha básica</h3>
-      <p><strong>Dano:</strong> varia — <strong>Tipo:</strong> Mage — <strong>Uso:</strong> controle de mobs</p>
-      <p><strong>Dica:</strong> invista em mana e mana potions para uso prolongado.</p>
-    </article>
-  </section>
-
-  <!-- Build/Load selo -->
-  <section class="card" style="max-width:1100px;margin:22px auto;">
-    <h2>Recomendações de build por estilo</h2>
-    <ul style="text-align:left;">
-      <li><strong>Melee:</strong> Priorize armadura com defesa alta, acessórios de velocidade e +dano corpo a corpo.</li>
-      <li><strong>Ranged:</strong> Use boa munição, armadura com aumento de velocidade de tiro e crítico.</li>
-      <li><strong>Mage:</strong> Maximize mana, use acessórios de redução de consumo e alta regeneração.</li>
-      <li><strong>Summoner:</strong> Tenha minions suficientes e acessórios que aumentem número/potência.</li>
-    </ul>
-  </section>
-
-</main>
-
-<footer class="footer">Terraria RPG — PT-BR</footer>
-
-<script src="index.js"></script>
 </body>
 </html>
