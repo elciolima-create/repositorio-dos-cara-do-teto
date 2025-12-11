@@ -1,0 +1,211 @@
+/* ===========================
+   TEMA TERRARIA - ARMAS
+   style-armas.css
+   =========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: #ffffff;
+}
+
+/* ---------------------------
+   FUNDO - ESTILO TERRARIA
+---------------------------- */
+body {
+  background: linear-gradient(180deg, #7dd0ff 0%, #4baaef 20%, #3fa34d 70%, #69491a 100%);
+  background-attachment: fixed;
+}
+
+/* ---------------------------
+   HEADER / MENU
+---------------------------- */
+.site-header {
+  background: rgba(0,0,0,0.65);
+  border-bottom: 4px solid #1f4ea3;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-img {
+  height: 50px;
+  image-rendering: pixelated;
+  filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.7));
+}
+
+.menu-btn {
+  display: none;
+  background: #4e8ed8;
+  padding: 8px 14px;
+  font-size: 22px;
+  color: #fffbb3;
+  border: 2px solid #1a3c78;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.main-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #fffbb3;
+  background: #4e8ed8;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 2px solid #1c4484;
+  transition: 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: #2f66b8;
+}
+
+/* ---------------------------
+   TÍTULO DA PÁGINA
+---------------------------- */
+.main {
+  padding: 40px 16px;
+}
+
+.section {
+  width: 92%;
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(0,0,0,0.45);
+  padding: 25px;
+  border-radius: 12px;
+  border: 3px solid rgba(255,255,255,0.05);
+  box-shadow: 0 0 14px rgba(0,0,0,0.4);
+}
+
+.section h1 {
+  font-size: 2.4rem;
+  text-align: center;
+  color: #b8ffd4;
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+  margin-bottom: 20px;
+}
+
+/* ---------------------------
+   BOTÕES DE FILTRO
+---------------------------- */
+.filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 16px;
+  background: #4e8ed8;
+  border: 2px solid #1c4484;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #fffbb3;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-btn:hover {
+  background: #2f66b8;
+}
+
+/* ---------------------------
+   LISTA DE ARMAS
+---------------------------- */
+.list {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.item {
+  background: rgba(0,0,0,0.55);
+  padding: 16px;
+  border-radius: 10px;
+  border: 3px solid rgba(255,255,255,0.06);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: 0.25s;
+}
+
+/* Hover estilo Terraria */
+.item:hover {
+  background: rgba(0,0,0,0.75);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* ---------------------------
+   ANIMAÇÃO DE ENTRADA
+---------------------------- */
+.item, .section {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: 0.5s ease-out;
+}
+
+.item.visivel,
+.section.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------------------------
+   FOOTER
+---------------------------- */
+.site-footer {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border-top: 4px solid #1f4ea3;
+  text-align: center;
+  color: #fffbb3;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* ---------------------------
+   RESPONSIVIDADE
+---------------------------- */
+@media (max-width: 880px) {
+  .main-nav a {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .main-nav.open a {
+    display: block;
+    margin: 6px 0;
+  }
+  .section h1 {
+    font-size: 1.9rem;
+  }
+}
